@@ -1,5 +1,7 @@
+# My environment
 .vscode/
 etcdemo/etcdemo/functions/modules/ja/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
