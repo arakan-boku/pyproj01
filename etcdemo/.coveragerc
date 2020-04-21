@@ -1,0 +1,24 @@
+[run]
+source = .
+omit = 
+	etcdemo/__init__.py
+	etcdemo/settings.py
+	etcdemo/urls.py
+	etcdemo/asgi.py
+	etcdemo/wsgi.py
+	etcdemo/hello.py
+	etcdemo/views.py
+	etcdemo/functions/__init__.py
+	etcdemo/tests_etcdemo/*
+	etcdemo/functions/modules/__init__.py
+	etcdemo/functions/tests_functions/*
+	etcdemo/functions/modules/models/__init__.py
+	etcdemo/functions/modules/tests_modules/*
+	etcdemo\functions\modules\ja\__init__.py 
+	etcdemo/functions/modules/models/tests_models/*
+	manage.py
+	
+
+[report]
+show_missing = True
+skip_covered = False

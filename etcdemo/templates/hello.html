@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load widget_tweaks %}
+
+{% block header %}
+　　　　　<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+{% endblock %}
+
+{% block title %}
+  Hello World
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row text-center">
+            <h1>Hello Form!!</h1>
+        </div>
+        <div class="row text-center">
+            <img src="{% static "images/boku.jpg" %}" />
+        </div>
+        <div class="row text-center">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% if name %}
+                    <h1>{{ name }}</h1>
+                {% else %} 
+                    {{form.as_p}}
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="送信">
+                    </div>
+                    <h2>{{ path }}</h2>
+                {% endif %} 
+            </form>
+        <div>
+    </div>
+ {% endblock %}

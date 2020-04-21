@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static "css/talk.css" %}"></link>
+{% endblock %}
+
+{% block title %}
+  もっとも似ている言葉を探す
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="post">{% csrf_token %}
+        <div class="form-group row my-4">
+        </div>
+        <h4>似ている言葉を探します（言葉の加減算付き）</h4>
+        <div class="form-group row my-4">         
+            <label class="col-lg-3 col-form-label"><h4>{{form.textplus.label}}</h4></label>
+    		<div class="col-lg-7">       
+	            {{form.textplus|add_class:"form-control"}}
+    		</div>
+        </div>
+        <div class="form-group row my-4">         
+            <label class="col-lg-3 col-form-label"><h4>{{form.textminus.label}}</h4></label>
+    		<div class="col-lg-7">       
+	            {{form.textminus|add_class:"form-control"}}
+    		</div>
+        </div>
+        <div class="form-group row my-4">         
+    		<div class="col-lg-3">       
+	            <button type="submit" class="btn btn-primary">送信する</button>
+    		</div>
+        </div>
+        <hr/>
+        <div id="resultarea">
+          <div class="form-group row text-center my-2"> 
+            {% if expstr %}        
+	        	  <h1>計算式：「{{ expstr }}」</h1>
+            {% endif %}   
+	        </div> 
+          <div class="form-group row text-center my-2"> 
+            {% if expstr %}        
+	        	  <h1>最も近い結果：「{{ result1 }}」</h1>
+            {% endif %}   
+	        </div> 
+          <div class="form-group row text-center my-2"> 
+            {% if expstr %}        
+	        	  <h1>近さの度合い：「{{ result2 }}」</h1>
+            {% endif %}   
+	        </div> 
+        </div>
+        </div>
+     </form>
+</div>  
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load widget_tweaks %}
+
+{% block header %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+{% endblock %}
+
+{% block title %}
+  サンプルその１
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-4">
+        <canvas id="myChart"></canvas>
+    </div>
+    <input type="hidden" id="chart_labels" name="chart_labels" value="{{ chart_labels}}">
+    <input type="hidden" id="chart_title" name="chart_title" value="{{ chart_title}}">
+    <input type="hidden" id="chart_target" name="chart_target" value="{{ chart_target}}">
+    <input type="hidden" id="chart_data" name="chart_data" value="{{ chart_data}}">
+</div>
+<script type="text/javascript" src="{% static "js/chart01.js" %}"></script>
+{% endblock %}
