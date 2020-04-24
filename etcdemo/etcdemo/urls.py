@@ -22,5 +22,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello.hello, name='hello'),
     path('demo01/', views.demo01, name='similar'),
-    path('demo02/', views.demo02, name='dragdrop')
+    path('demo02/', views.demo02, name='dragdrop'),
+    path('chart01/', views.chart01, name='chart01'),
+    path('chart02/', views.chart02, name='chart01'),
+    path('chart03/', views.chart03, name='chart01'),
+    path('chart04/', views.chart04, name='chart01'),
+    path('chart05/', views.chart05, name='chart01')
 ]

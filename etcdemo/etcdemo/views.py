@@ -2,6 +2,7 @@ from django.shortcuts import render
 from . import form as fm
 from django.template.context_processors import csrf
 from .functions import functions as func
+from .functions import gr_functions as gr_func
 
 
 """
@@ -49,3 +50,68 @@ def demo02(request):
         c = {'form': form}
         c.update(csrf(request))
     return render(request, 'dragdrop.html', c)
+
+
+def chart01(request):
+    gr = gr_func.Chart01Function()
+    c = {
+        'x_data_str': gr.get_xstr(),
+        'y_data_str': gr.get_ystr(),
+        'label_text': "くらげっぽいかな？",
+        'title_text': "クラゲっぽいかな？",
+        'chart_size': 500,
+        'show_line': "",
+    }
+    return render(request, 'chart01.html', c)
+
+
+def chart02(request):
+    gr = gr_func.Chart02Function()
+    c = {
+        'x_data_str': gr.get_xstr(),
+        'y_data_str': gr.get_ystr(),
+        'label_text': "シダの葉っぱっぽいやつ",
+        'title_text': "シダの葉っぱっぽいやつ",
+        'chart_size': 500,
+        'show_line': "",
+    }
+    return render(request, 'chart01.html', c)
+
+
+def chart03(request):
+    gr = gr_func.Chart03Function()
+    c = {
+        'x_data_str': gr.get_xstr(),
+        'y_data_str': gr.get_ystr(),
+        'label_text': "Gasket",
+        'title_text': "Gasket",
+        'chart_size': 500,
+        'show_line': "",
+    }
+    return render(request, 'chart01.html', c)
+
+
+def chart04(request):
+    gr = gr_func.Chart04Function()
+    c = {
+        'x_data_str': gr.get_xstr(),
+        'y_data_str': gr.get_ystr(),
+        'label_text': "Snow",
+        'title_text': "Snow",
+        'chart_size': 500,
+        'show_line': "",
+    }
+    return render(request, 'chart01.html', c)
+
+
+def chart05(request):
+    gr = gr_func.Chart05Function()
+    c = {
+        'x_data_str': gr.get_xstr(),
+        'y_data_str': gr.get_ystr(),
+        'label_text': "Ccurve",
+        'title_text': "Ccurve",
+        'chart_size': 500,
+        'show_line': "",
+    }
+    return render(request, 'chart01.html', c)
