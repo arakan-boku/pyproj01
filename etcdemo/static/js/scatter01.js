@@ -29,6 +29,7 @@ var scatterChartData = {
         backgroundColor: window.chartColors.blue,
         pointRadius: 3,
         showLine: Boolean(showLine),
+        fill: false,
         borderWidth: 1,
         data: generateData()
     }]

@@ -57,10 +57,10 @@ def chart01(request):
     c = {
         'x_data_str': gr.get_xstr(),
         'y_data_str': gr.get_ystr(),
-        'label_text': "くらげっぽいかな？",
-        'title_text': "クラゲっぽいかな？",
+        'label_text': "樹形図",
+        'title_text': "樹形図",
         'chart_size': 500,
-        'show_line': "",
+        'show_line': "true",
     }
     return render(request, 'chart01.html', c)
 
@@ -70,8 +70,8 @@ def chart02(request):
     c = {
         'x_data_str': gr.get_xstr(),
         'y_data_str': gr.get_ystr(),
-        'label_text': "シダの葉っぱっぽいやつ",
-        'title_text': "シダの葉っぱっぽいやつ",
+        'label_text': "バーンスレイのシダ",
+        'title_text': "バーンスレイのシダ",
         'chart_size': 500,
         'show_line': "",
     }
